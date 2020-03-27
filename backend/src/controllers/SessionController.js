@@ -4,14 +4,14 @@ module.exports = {
     async create (request, response) {
         const { id } = request.body;
 
-        const ong = await connection('ongs')
+        const hero = await connection('heroes')
         .where('id', id)
         .select('name')
         .first();
 
-    if  (!ong) {
-        return response.status(400).json({ error: 'No ONG found with this ID'});
+    if  (!hero) {
+        return response.status(400).json({ error: 'No HERO found with this ID'});
     }
-        return response.json(ong)
+        return response.json(hero)
     }
 }

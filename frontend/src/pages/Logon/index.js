@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom'
-import { FiLogIn } from 'react-icons/fi'
+import { FiLogIn, FiLink } from 'react-icons/fi'
 import api from '../services/api'
 
 import './styles.css' 
@@ -28,9 +28,10 @@ export default function Logon() {
     }
     
     return (
+        <div>
         <div className="logon-container">
             <section className="form">
-                <img src={logoImg} alt='Be The Hero'/>
+                <img className="logo" src={logoImg} alt='Be The Hero'/>
 
                 <form onSubmit={handleLogin}>
                     <h1>Faça seu logon</h1>
@@ -48,8 +49,18 @@ export default function Logon() {
                     </Link>
                 </form>
             </section>
+           
 
-             <img className="people" src={heroesImg} alt='Hero'/>       
+            <img className="people" src={heroesImg} alt='Hero'/>
+            
         </div>
+        <footer>
+        <Link className="acessbutton" to="/about">
+        <FiLink size={20} color='#cccccc' id='icon' />
+        Saiba mais sobre o projeto de estudo e ajuda comunitária  <strong>"Be The Hero"</strong>
+        </Link>
+        </footer>
+        </div>
+        
     )
 }

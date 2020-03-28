@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import logoImg from '../../assets/Logo.svg'
 import { Link, useHistory } from 'react-router-dom'
 import { FiPower, FiTrash2 } from 'react-icons/fi'
-import './style.css'
+import './profilestyle.css'
 import api from '../services/api'
 
 export default function Profile() {
